@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!-- Leaflet -->
+  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    <title>SternApartments</title>
+
+<style>
+    @media screen and (max-width: 670px){
+        header{f
+            min-height: 500px;
+        }
+    }
+    .section{
+      padding-top: 2vw;
+      padding-bottom: 4vw;
+    }
+    .carousel{
+      height: 700 !important;
+      min-height: auto;
+
+    }
+    .tabs .indicator{
+      background-color: #1a237e;
+    }
+    .tabs .tab a:focus, .tabs .tab a:focus.active{
+      background: transparent;
+    }
+    .leaflet-control-attribution, .leaflet-control{
+      display: none;
+    }
+    .containerFooter{
+      display: flex;
+      position: relative;
+      margin-left: 40%;
+    }
+    .facebook{
+      margin: 1%;
+    }
+    .instagram{
+      margin: 1%;
+    }
+    .twitter{
+      margin: 1%;
+    }
+</style>
+</head>
+<body>
+
+<!--navbar-->
+<header>
+  <nav class="nav-wrapper white">
+    <a href="#" class="brand-logo blue-text text-darken-2">
+      <img src="Image\index.png" height="70">
+    </a>
+    <div class="container">
+      <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+        <i class="material-icons black">menu</i>
+      </a>
+    <ul class="right hide-on-med-and-down">
+      <li><a target="_blank" href="https://www.instagram.com/be_hoosain/" class="tooltipped btn-floating btn-small teal" data-position="bottom" data-tooltip="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a></li>
+
+      <li><a target="_blank" href="https://www.facebook.com/shakeel.hoosain.0204" class="tooltipped btn-floating btn-small teal" data-position="bottom" data-tooltip="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a></li>
+
+      <li><a target="_blank" href="https://twitter.com/Zero_Day_Bot" class="tooltipped btn-floating btn-small teal" data-position="bottom" data-tooltip="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a></li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#cards" class="black-text">Apartments</a></li>
+      <li><a href="#aboutMe" class="black-text">About Me</a></li>
+      <li><a href="#contact" class="black-text text-lighten-5">Contact Us</a></li>
+    </ul>
+    <ul class="sidenav grey lighten-2" id="mobile-menu">
+      <li><a href="#cards">Our Apartments</a></li>
+      <li><a href="#aboutMe">About Us</a></li>
+      <li><a href="#contact">Get in touch</a></li>
+    </ul>
+    </div>
+  </nav>
+      <!--Initialize Carousel-->
+  <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="Image/SternApartmentImagesNew/IMG_8696.JPG"></a>
+    <a class="carousel-item" href="#two!"><img src="Image/SternApartmentImagesNew/IMG_8854.JPG"></a>
+    <a class="carousel-item" href="#three!"><img src="Image/SternApartmentImagesNew/IMG_8853.JPG"></a>
+    <a class="carousel-item" href="#four!"><img src="Image/SternApartmentImagesNew/IMG_8864.JPG"></a>
+  </div>
+</header>
+
+<!--Card Grid-->
+<section class="section container scrollspy " id="cards">
+    <h2 class="center-align teal-text text-lighten-1">Stern Self Catering Apartments</h2>
+
+    <div class="center-align">
+      <h5 class="teal-text text-lighten-">Welcome</h5>
+      <p>At Stern Apartments our aim is to make your stay with us as comfortable as possible, allowing you to experience Windhoek as you see fit or if you want to simply sit back relax and enjoy our garden view.<br>So come be our guest and discover Windhoek the beating pulse of Namibia.</p>
+    </div>
+<!--Row 1-->
+    <div class="row">
+        <div class="col s12 l6">
+        <div class="card hoverable">
+            <div class="card-image">
+                <img src="Image\SternApartments\studio.jpg" alt="">
+                <span class="card-title grey-text"></span>
+            </div>
+            <div class="card-content">
+                <p>WIFI · Air conditioning · Balcony (with seating area) · Television with DSTV · Desk · Queen bed · Cupboards with hangers · Shower only · Toilet · Towels · Mini toiletries · Microwave · Toaster · Kettle · Stove with oven · Fridge · Salt and pepper · Cutlery · Pots and pans · Iron </p>
+            </div>
+            <div class="card-action">
+                <a href="https://www.nightsbridge.co.za/bridge/book?bbid=28208">Studio Apartment</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="col s12 l6">
+          <div class="card hoverable">
+              <div class="card-image">
+                  <img src="Image\SternApartments\Luxury2.jpg" alt="">
+                  <span class="card-title grey-text"></span>
+              </div>
+              <div class="card-content">
+                  <p>WIFI · Air conditioning · Balcony (with seating area) · Television with DSTV · Couch · Dining table · 2 bedrooms · Cupboards with hangers · Shower only · Toilet · Towels · Microwave · Stove with oven · Toaster · Kettle · Fridge · Salt and pepper · Cutlery · Pots and pans · Iron </p>
+              </div>
+              <div class="card-action">
+                  <a href="https://www.nightsbridge.co.za/bridge/book?bbid=28208">Luxury 2 bedroom Apartment</a>
+              </div>
+          </div>
+          </div>
+
+        <!--Row 2-->
+    <div class="row">
+        <div class="col s12 l6">
+        <div class="card hoverable">
+            <div class="card-image">
+                <img src="Image\SternApartments\Luxury.jpg" alt="">
+                <span class="card-title grey-text"></span>
+            </div>
+            <div class="card-content">
+                <p>WIFI · Air conditioning · Balcony (with seating area) · Television with DSTV · Couch · Dining table · Beds · Cupboards with hangers · Shower · Toaster · Kettle · Toilet · Towels · Mini toiletries · Microwave · Stove with oven · Fridge · Salt and pepper · Cutlery · Pots and pans · Iron </p>
+            </div>
+            <div class="card-action">
+                <a href="https://www.nightsbridge.co.za/bridge/book?bbid=28208">Luxury Apartment</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="col s12 l6">
+        <div class="card hoverable">
+            <div class="card-image">
+                <img src="Image\SternApartments\Standard.jpg" alt="">
+                <span class="card-title grey-text"></span>
+            </div>
+            <div class="card-content">
+                <p>WIFI · Balcony (with seating area) · Television with DSTV · Couch · Toaster · Kettle · Dining table · King bed · Cupboards with hangers · Shower · Toilet · Washing machine · Towels · Mini toiletries · Microwave · Stove with oven · Fridge · Salt and pepper · Cutlery · Pots and pans
+                </p>
+            </div>
+            <div class="card-action">
+                <a href="https://www.nightsbridge.co.za/bridge/book?bbid=28208">Standard Apartment</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="center-align">
+      <h5 class="teal-text">Book us today via:</h5>
+
+      <div class="row hide-on-med-and-up">
+        <div class="col" style="width: 25%; float:left;"><button class="btn teal">Nightbridge.co.za</button></div>
+        <div class="col" style="width: 25%; float:Right;"><button class="btn teal">Booking.com</button></div>
+      </div>
+
+      <div class="row hide-on-small-only">
+        <div class="col s6"><button class="btn teal">Nightbridge.co.za</button></div>
+        <div class="col s6"><button class="btn teal">Booking.com</button></div>
+      </div>
+
+    </div>
+</section>
+ <!-- parallax -->
+ <div class="parallax-container">
+    <div class="parallax">
+      <img src="Image/SternApartmentImagesNew/IMG_8687.JPG" alt="" class="responsive-img">
+    </div>
+  </div>
+
+<!--About Us-->
+<section class="section container scrollspy" id="aboutMe">
+    <div class="center-align">
+      <div class="col s12 l4">
+        <h2 class="teal-text text-lighten-1">Let's tell you a little about us.</h2>
+        <p>We offer more than Self Catering Apartments, we offer you a home away from home. A place you can lay your head down after a long day, a place you can smile and share stories about your adventures across the land of the brave with your loved ones, a place you can prepare for those daunting business meeting or conferences.<br>Thus our Staff is well trained and our facilities are clean, organized and well kept, allowing you to worry about nothing but making the most out of your stay.
+        </p>
+          <h5 class="teal-text text-lighten-1">Highlights</h5>
+
+          <ol class="left-align">
+            <li>Our apartments offer WIFI to all our guests so that they may never feel disconnected.
+            </li>
+            <li>Want to feel one with nature, we got you covered. Breath in the fresh clean oxygen from our stunning garden views all while relaxing in your apartment.
+            </li>
+            <li>If you are feeling a bit adventurous we are centrally located, but a stroll away from the pulse of Windhoek's CBD and many more sites for any kind of day..
+            </li>
+            <li>If you are feeling a little paranoid about the safety of your vehicle, don't worry and sleep peacefully knowing it is safe in our on site private parking area.
+            </li>
+             <li>Finally, we offer a fully equipped kitchen, a dinning area to spend with your loved ones, a flat screen TV with satellite channels to catch up on all your favourite shows and of course a private bathroom with a shower.
+            </li>
+          </ol>
+      </div>
+
+      <div id="testimonial">
+        <div class="container">
+            <div class="row">
+          <div class="">
+              <h2 class="teal-text text-lighten-1">Happy Clients</h2>
+              <p class="grey-text text-lighten">This is what our guest had to say</p>
+          </div>
+
+          <div class="">
+              <blockquote>
+            <i>“It’s spacious, comfy, well located. Good host. Quiet and well located, easy access to city center.”</i>
+            <p><span class="author"><cite class="orange-text text-darken-1">Delfina</cite></span></p>
+              </blockquote>
+          </div>
+
+          <div class="">
+              <blockquote>
+            <i>“The place is new, clean and in  Great condition,  very cosy personal space one can ever have, the city center is a mile away you can just walk.”</i>
+            <p><span class="author"><cite class="orange-text text-darken-1">Lydia</cite></span></p>
+              </blockquote>
+          </div>
+
+          <div class="">
+              <blockquote>
+            <i>“The location was great. We were able to do our grocery shopping without using the car.
+                The staff is awesome. Everyone was really kind and understanding. Wonderful, very caring guards at the parking.”</i>
+            <p><span class="author"><cite class="orange-text text-darken-1">Dan</cite></span></p>
+              </blockquote>
+          </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  </section>
+
+ <!-- parallax -->
+ <div class="parallax-container">
+    <div class="parallax">
+      <img src="Image/SternApartmentImagesNew/IMG_8647.JPG" alt="" class="responsive-img">
+    </div>
+  </div>
+
+<!--Contaxt Form-->
+<section class="section container scrollspy" id="contact">
+    <div class="row">
+      <div class="col s12 l5">
+        <h2 class="teal-text text-lighten-1">Get in Touch</h2>
+        <ul type="1" >
+        <li>
+          <h5>Address</h5>
+          Tal street Stern building no 8, 9000 Windhoek, Namibia
+        </li>
+        <li>
+          <h5>Email</h5>
+          info@sternapartments.com
+        </li>
+        <li>
+          <h5>Phone Number</h5>
+          Cell: +264 (0)64 25 41 743
+        </li
+        </ul>
+      </div>
+      <div class="col s12 l5 offset-l2">
+        <form class="contact-form", method="post", action="contactform.php">
+          <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="name" type="text" class="validate">
+            <label for="name">Your Name</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input type="email" id="email">
+            <label for="email">Your Email</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">message</i>
+            <textarea id="message" class="materialize-textarea" cols="20" rows="20"></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <div class="input-field center">
+            <button class="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+<!-- parallax -->
+<div class="parallax-container">
+
+<div  id="mapid" style="width: 100%; height: 400px;"></div>
+<script>
+
+	var map = L.map('mapid').setView([-22.573461, 17.084384], 7.5);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+		maxZoom: 18,
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by -22.573383776713907, 17.084373235702515<a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
+
+    var shapeStyle = {
+            color: 'blue',
+            fillColor: 'blue',
+            weight: 2,
+            fillOpacity: 0.1
+    };
+
+	L.circle([-22.573461, 17.084384], 1000, shapeStyle).addTo(map).bindPopup("I am a circle.");
+	var popup = L.popup();
+
+  L.marker([-22.573461, 17.084384]).addTo(map).bindPopup('Stern Apartments');
+
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("You clicked the map at " + e.latlng.toString())
+			.openOn(map);
+  }
+
+	map.on('click', onMapClick);
+
+</script>
+  </div>
+
+
+<!--Footer-->
+<footer class="page-footer grey darken-3 center-align">
+    <div>
+      <div class="row">
+          <ul class="containerFooter">
+            <li class="facebook">
+              <i class="fab fa-facebook"></i>
+              <a target="_blank" href="https://www.facebook.com/shakeel.hoosain.0204" class="grey-text text-lighten-3" href="#">Facebook</a>
+            </li>
+            <li class="instagram">
+              <i class="fab fa-instagram"></i>
+              <a target="_blank" href="https://www.instagram.com/be_hoosain/" class="grey-text text-lighten-3" href="#">Instagram</a>
+
+            </li>
+          </ul>
+
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-4 ">
+      <div class="container center-align">&copy; 2020 Shakeel Hoosain</div>
+    </div>
+  </footer>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$('.sidenav').sidenav();
+$('.materialboxed').materialbox();
+$('.parallax').parallax();
+$('.datepicker').datepicker({
+  disableWeekends: true,
+  yearRange: 1
+});
+$('.tooltipped').tooltip();
+$('.scrollspy').scrollSpy();
+$('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
+var autoplay = true;
+setInterval(function() { if(autoplay) $('.carousel.carousel-slider').carousel('next'); }, 3000);
+$('.carousel.carousel-slider').hover(function(){ autoplay = false; },function(){ autoplay = true; });
+
+});
+</script>
+</body>
+</html>
